@@ -1,0 +1,137 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #9db3fb;
+  }
+  .header {
+    background-color: #1a1b4d;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; 
+  }
+  .logo {
+    margin-right: auto;
+  }
+  .logo h1{
+    color: #9db3fb;
+  }
+  .main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; 
+  }
+  .main-menu li {
+    margin-left: 20px;
+  }
+  .search-bar {
+    width: 100%;
+    max-width: 200px; 
+    margin-left: 20px;
+  }
+  .search-bar input {
+    width: 100%; 
+    padding: 5px;
+  }
+  .main-content {
+    background-color: #9db3fb;
+    color: #1a1b4d;
+    display: flex;
+    padding: 20px;
+    margin-top: 60px; 
+  }
+  .news-feed {
+    flex-grow: 1; 
+    padding-right: 20px;
+  }
+  .news-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  .sidebar {
+    flex-basis: 33.33%; 
+    max-width: 250px;
+    padding-left: 20px;
+  }
+  .popular-articles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .popular-articles li {
+    margin-bottom: 10px;
+  }
+  .ad-banner img {
+    width: 100%;
+    display: block; 
+  }
+  .footer {
+    background-color: #1a1b4d;
+    color: #9db3fb;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-info, .social-links, .copyright {
+    margin-bottom: 10px;
+  }
+  
+  .social-links a {
+    color: #fff;
+    margin: 0 10px;
+  }
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column; 
+    }
+  
+    .sidebar {
+      flex-basis: auto; 
+      max-width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start; 
+    }
+  
+    .logo {
+      margin-right: 0; 
+      margin-bottom: 10px;
+    }
+  
+    .main-menu {
+      width: 100%;
+    }
+  
+    .main-menu ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .main-menu li {
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+  
+    .footer {
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация в CSS</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style4.css">
+</head>
+<body>
+    <h1>Анимация нескольких объектов с синхронизацией</h1>
+    <div id="animation-container">
+        <div class="shape square"></div>
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape rectangle"></div>
+        <div class="shape rhombus"></div>
+    </div>
+
+    <h1>Интерактивная анимация на основе событий</h1>
+    <div class="interactive"></div>
+
+    <script>
+        const interactiveElement = document.querySelector('.interactive');
+
+        interactiveElement.addEventListener('click', () => {
+            interactiveElement.classList.toggle('clicked');
+        });
+    </script>
+</body>
+</html>

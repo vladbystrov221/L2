@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Псевдоклассы в CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+    <h1>Задание №1 Псевдоклассы в CSS</h1>
+
+    <p><b>1. :hover  </b>"Изменить цвет фона кнопки при наведении курсора."</p>
+    <button>При наведении меняю цвет!!!</button>
+
+    <p><b>2.  :active </b> "Выделить текущий активный пункт навигационного" </p>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">О себе</a></li>
+        <li><a href="#">Цены</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <p><b>3.  :visited</b> "Стилизуйте ссылки, посещенные ранее"</p>
+    <a href="https://www.google.com">Ссылка на Google</a><br>
+    <a href="https://www.youtube.com">Ссылка на YouTube</a>
+
+    <p><b>4.  :checked</b> "Внедрите интерактивность, скрывая или отображая 
+      дополнительные элементы при помощи :checked и 
+      :not(:checked) для чекбоксов или радио-кнопок." </p>
+      <input type="checkbox" id="toggle-content">
+      <label for="toggle-content">Показать/Скрыть Дополнительный Контент</label>
+      
+      <div id="hidden-content">
+        <p>Этот контент будет показан или скрыт при изменении состояния чекбокса.</p>
+        <ul>
+            <li>Пункт списка 1</li>
+            <li>Пункт списка 2</li>
+        </ul>
+      </div>
+      
+      <script>
+        const checkbox = document.getElementById('toggle-content');
+        const content = document.getElementById('hidden-content');
+      
+        checkbox.addEventListener('change', function() {
+          if (this.checked) {
+            content.style.display = 'block'; // Показать контент
+          } else {
+            content.style.display = 'none';  // Скрыть контент
+          }
+        });
+      </script>
+      
+      <p><b>5.  :target</b> Измените цвет текущей активной вкладки </p>
+      <nav>
+        <ul>
+          <li><a href="#section1">Первая вкладка</a></li>
+          <li><a href="#section2">Вторая вкладка</a></li>
+          <li><a href="#section3">Третья вкладка</a></li>
+        </ul>
+      </nav>
+      
+      <section id="section1">
+        <h2>Первая вкладка</h2>
+        <p>Всякая информация</p>
+      </section>
+      
+      <section id="section2">
+        <h2>Вторая вкладка</h2>
+        <p>Информация для второй вкладки</p>
+      </section>
+      
+      <section id="section3">
+        <h2>Третья вкладка</h2>
+        <p>Информация в третьей вкладке</p>
+      </section>
+      <p><b>6.  :focus</b> "Добавьте стили, чтобы при получении фокуса полем 
+        ввода оно выделялось другим цветом рамки или фона." </p>
+        <input type="text" placeholder="Введите текст">
+        <p><b>7.  :nth-of-type</b> "Используйте :nth-of-type() для оформления каждого 
+          третьего элемента в списке."</p>
+          <ul>
+            <li>Элемент 1</li>
+            <li>Элемент 2</li>
+            <li>Элемент 3</li>
+            <li>Элемент 4</li>
+            <li>Элемент 5</li>
+            <li>Элемент 6</li>
+            <li>Элемент 7</li>
+            <li>Элемент 8</li>
+            <li>Элемент 9</li>
+          </ul>
+</body>
+</html>

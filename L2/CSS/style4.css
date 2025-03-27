@@ -1,0 +1,109 @@
+.shape {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; 
+            background-color: #3498db; 
+            transition: transform 0.3s ease-in-out; 
+        }
+        .square {
+            left: 50px;
+            top: 50px;
+            border-radius: 0; 
+            animation: moveSquare 5s infinite alternate, reset 5s steps(1, end) 5s;
+        }
+        .circle {
+            left: 150px;
+            top: 100px;
+            background-color: #e74c3c; 
+            animation: moveCircle 7s infinite alternate, reset 5s steps(1, end) 7s;
+        }
+        .triangle {
+            left: 250px;
+            top: 75px;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid #f39c12; 
+            border-radius: 0; 
+            background: none;
+            animation: moveTriangle 6s infinite alternate, reset 5s steps(1, end) 6s;
+        }
+        .rectangle {
+            left: 350px;
+            top: 125px;
+            width: 75px;
+            height: 25px;
+            border-radius: 0; 
+            background-color: #9b59b6; 
+            animation: moveRectangle 8s infinite alternate, reset 5s steps(1, end) 8s;
+        }
+        .rhombus {
+            left: 450px;
+            top: 50px;
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            background-color: #2ecc71; 
+            transform: rotate(45deg); 
+            animation: moveRhombus 9s infinite alternate, reset 5s steps(1, end) 9s;
+        }
+        @keyframes moveSquare {
+            0% { transform: translateX(0px) translateY(0px); }
+            100% { transform: translateX(100px) translateY(50px) rotate(90deg); }
+        }
+        @keyframes moveCircle {
+            0% { transform: translateX(0px) translateY(0px); }
+            100% { transform: translateX(150px) translateY(-25px) scale(1.2); }
+        }
+
+        @keyframes moveTriangle {
+            0% { transform: translateX(0px) translateY(0px); }
+            100% { transform: translateX(50px) translateY(75px) rotate(-45deg); }
+        }
+
+        @keyframes moveRectangle {
+            0% { transform: translateX(0px) translateY(0px); }
+            100% { transform: translateX(100px) translateY(-50px) scaleX(0.8); }
+        }
+
+        @keyframes moveRhombus {
+            0% { transform: translateX(0px) translateY(0px); }
+            100% { transform: translateX(75px) translateY(100px) rotate(-90deg); }
+        }
+        @keyframes reset{
+            0%{
+               visibility: visible;
+            }
+            100%{
+                visibility: hidden;
+                transform: translateX(0px) translateY(0px) rotate(0deg) scale(1) scaleX(1);
+            }
+        }
+        .interactive {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 200px auto;
+            transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+            cursor: pointer; 
+        }
+        .interactive:hover {
+            transform: rotate(180deg); 
+            width: 110px; 
+            height: 110px;
+        }
+        .interactive.clicked {
+            transform: rotate(0deg) scale(0.8); 
+            width: 90px;
+            height: 90px;
+        }
+        #animation-container {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
